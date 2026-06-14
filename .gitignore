@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+.next/
+.vercel/
+
+# Python
+backend/__pycache__/
+backend/**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+backend/.venv/
+
+# Runtime data
+backend/data/
+
+# Environment
+backend/.env
+frontend/.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
