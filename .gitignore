@@ -18,8 +18,8 @@ backend/.venv/
 backend/data/
 
 # Environment
-# backend/.env (commented out to allow pushing)
-# frontend/.env.local (commented out to allow pushing)
+backend/.env
+frontend/.env.local
 
 # Secrets
 backend/client_secret.json
