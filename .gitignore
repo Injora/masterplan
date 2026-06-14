@@ -18,8 +18,13 @@ backend/.venv/
 backend/data/
 
 # Environment
-backend/.env
-frontend/.env.local
+# backend/.env (commented out to allow pushing)
+# frontend/.env.local (commented out to allow pushing)
+
+# Secrets
+backend/client_secret.json
+backend/injora07.json
+backend/injoraman.json
 
 # OS
 .DS_Store
