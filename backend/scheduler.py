@@ -90,12 +90,14 @@ async def job_daily_shorts_pipeline() -> None:
     # =========================================================================
     logger.info("⏰ [SCHEDULED] Starting Step 2: Viral Video Slicing...")
     clipper_prompt = (
-        "Suggest a highly viral YouTube search query that will yield clips of popular podcasts, "
-        "streamer moments, or extreme challenges (like MrBeast). "
-        "Respond with ONLY a precise YouTube search query (4 to 8 words max)."
+        "Pick ONE of these 3 categories at random and suggest a SPECIFIC, highly viral YouTube search query for it:\n"
+        "1. SPORTS: A specific recent epic sports moment (e.g. 'UFC 305 knockout highlights', 'NBA finals clutch shots 2025', 'cricket world cup best sixes')\n"
+        "2. STREAMERS: A specific popular streamer rage/funny moment (e.g. 'IShowSpeed funniest rage moments', 'xQc heated argument clips', 'Kai Cenat funny moments')\n"
+        "3. CONTROVERSIAL PODCASTS: A specific heated podcast debate (e.g. 'Joe Rogan heated argument guest', 'Flagrant podcast roast best moments', 'Fresh and Fit podcast debate')\n"
+        "Respond with ONLY the YouTube search query (4 to 8 words max). No extra text."
     )
     
-    viral_query = "top podcast viral funny moments"
+    viral_query = "UFC knockout highlights best moments"
     try:
         raw_query = await gemini.generate_content(clipper_prompt)
         viral_query = raw_query.strip().strip('"').strip("'")

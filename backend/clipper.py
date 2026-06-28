@@ -88,18 +88,24 @@ class ClipMetadata(BaseModel):
 # ══════════════════════════════════════════════════════════════════
 
 _NICHE_QUERIES: dict[str, str] = {
-    "gaming": "gaming highlights epic moments",
-    "tech": "tech review trending 2025 best gadgets",
-    "sports": "sports highlights incredible moments",
+    # Primary niches — sports, streamers, controversial podcasts
+    "sports": "sports highlights insane moments knockout goal",
+    "football": "football soccer best goals highlights incredible",
+    "basketball": "NBA basketball insane dunks clutch moments",
+    "mma": "UFC MMA knockout fight highlights brutal",
+    "boxing": "boxing knockout best fights highlights",
+    "cricket": "cricket best moments sixes wickets highlights",
+    "streamer": "streamer rage funny moments twitch fails",
+    "twitch": "twitch clips funny rage moments viral",
+    "podcast": "podcast controversial heated debate viral moment",
+    "joe_rogan": "joe rogan podcast heated argument best clips",
+    "flagrant": "flagrant podcast funniest moments roast",
+    "fresh_fit": "fresh and fit podcast debate heated argument",
+    # Secondary niches
+    "gaming": "gaming highlights epic rage moments",
     "comedy": "comedy stand-up funny viral moments",
-    "education": "educational interesting facts explained",
-    "science": "science explained mind-blowing",
-    "news": "trending news stories this week",
-    "finance": "finance investing tips viral",
-    "fitness": "fitness workout motivation transformation",
-    "cooking": "cooking recipe viral food hack",
-    "music": "music performance amazing talent",
-    "animals": "animals funny cute viral moments",
+    "news": "trending news stories viral this week",
+    "finance": "finance investing tips viral debate",
 }
 
 
